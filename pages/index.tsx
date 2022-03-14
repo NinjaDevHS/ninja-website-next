@@ -5,11 +5,7 @@ import Container from "@mui/material/Container";
 
 import Home from "components/containers/home/Home";
 
-interface IProps {
-  userAgent?: string;
-}
-
-const HomePage: NextPage<IProps> = (): ReactElement => {
+const HomePage: NextPage = (): ReactElement => {
   return (
     <Container>
       <Home />

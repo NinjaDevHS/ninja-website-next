@@ -7,7 +7,6 @@ export const serverSideRenderMiddleWare = async (
   res,
   reduxStore
 ): Promise<void> => {
-  console.log("inside serverSideRenderMiddleWare");
   const { dispatch } = reduxStore;
   await dispatch(hydrateStore(req.headers["user-agent"]));
 };
