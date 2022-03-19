@@ -1,26 +1,36 @@
 import React, { ReactElement } from "react";
+import { Parallax } from "react-parallax";
 
 import Stack from "@mui/material/Stack";
 
-import GitBanner from "components/commons/shared/banners/GitBanner";
-import { Typography } from "@mui/material";
+import KeywordsContent from "components/containers/home/KeywordsContent";
+import TokenContent from "components/containers/home/TokenContent";
+import TopContent from "components/containers/home/TopContent";
+import Questions from "components/containers/questions/Questions";
 
 const Home = (): ReactElement => {
   return (
-    <>
-      <GitBanner />
-      <Stack>
-        <Typography variant="h2">
-          &gt; Ninja
-          <br />
-          Developer
-          <br />
-          Hacking
-          <br />
-          Squad ▮
-        </Typography>
+    <Stack>
+      <Parallax
+        blur={5}
+        bgImage="/images/ninja.png"
+        bgImageAlt="ninja dev"
+        bgImageStyle={{ opacity: 0.1, maxHeight: "1400px" }}
+        strength={200}>
+        <Stack my={8}>
+          <TopContent />
+        </Stack>
+        <Stack my={8}>
+          <KeywordsContent />
+        </Stack>
+        <Stack my={8}>
+          <TokenContent />
+        </Stack>
+      </Parallax>
+      <Stack my={8}>
+        <Questions />
       </Stack>
-    </>
+    </Stack>
   );
 };
 

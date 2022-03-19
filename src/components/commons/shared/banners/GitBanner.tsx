@@ -1,11 +1,13 @@
 import React, { ReactElement } from "react";
 
-import { Typography } from "@mui/material";
 import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+
+import Link from "components/commons/elements/links/Link";
 
 const GitBanner = (): ReactElement => {
   return (
-    <Stack p={1} sx={{ backgroundColor: "secondary.main" }}>
+    <Stack p={1} alignItems="center" sx={{ backgroundColor: "secondary.main" }}>
       <Typography variant="caption">
         This is a sample minting website on Rinkeby (but with fully working
         functionalities) for a sample NFT collection, developed for educational
@@ -14,12 +16,12 @@ const GitBanner = (): ReactElement => {
           px={1}
           variant="caption"
           sx={{ textDecoration: "underline" }}>
-          <a
+          <Link
             href="https://github.com/NinjaDevHS"
             target="_blank"
             rel="noreferrer">
             available on GitHub!
-          </a>
+          </Link>
         </Typography>
       </Typography>
     </Stack>
