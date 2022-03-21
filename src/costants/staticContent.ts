@@ -86,3 +86,51 @@ export const questionAndAnswer: QuestionAnswersType[] = [
       "We feel you...but a supply of 1024 was the perfect number, as you'll surely agree, and it couldn't fit all languages. And anyway, tbh, all relevant languages worth knowing today should be present :P(*)."
   }
 ];
+
+export type RoadMapListType = {
+  title: string;
+  steps: string[];
+};
+
+export const roadMapList: RoadMapListType[] = [
+  {
+    title: "V 0.9: HELLO WORLD",
+    steps: [
+      "Ninja website launched.",
+      "Discord and Twitter channels are now open and starting to attract the real OGs.",
+      "Call to all Web2 and Web3 Ninjas.",
+      "Requirements for initial whitelist slots to be provided into the Discord's #announcement channel."
+    ]
+  },
+  {
+    title: "V 1.0: PRODUCTION",
+    steps: [
+      "1st NFT drop of 1024 unique Ninja keywords: ERC-721 Smart Contract on Ethereum and IPFS for decentralized storage.",
+      "Blind minting for whitelisted users during pre-sale, followed by public sale and reveal.",
+      "The collection will have 8 LEGENDARY keywords and 32 ultra-rare. Good luck to all!",
+      "Keep up on our Discord's #announcement channel for the details about whitelists, pre-sale, and public sale."
+    ]
+  },
+  {
+    title: "V 1.1: BENEFITS GO LIVE",
+    steps: [
+      "Get all the source code powering this website's frontend + backend, and other internal tools used for the drop. More details are in the Token Utility section above.",
+      "Access to private Discord channels will be unlocked using collab.land.",
+      "Recognition on the Ninja Developer's Hall of Fame Gallery: link your profile or website from the iconic keyword you own (link details are stored off-chain, and you'll be able to update this at any time and at no cost)."
+    ]
+  },
+  {
+    title: "V 2.0: WARRIORS",
+    steps: [
+      "2nd drop of 2048 new unique Warrior NFTs, of which 1024 will be reserved to Ninja holders!",
+      "Mint price, whitelist requirements, and other details will be voted on and decided by the Ninja holders community."
+    ]
+  },
+  {
+    title: "V 2.1: ONWARDS AND UPWARDS",
+    steps: [
+      "NSquad masters might introduce Web3 and NFT projects to which Ninja and Warrior Developers could apply on a full-time or part-time basis.",
+      "DNinjas and Warriors work together to take control of the community and creation of new initiatives."
+    ]
+  }
+];
