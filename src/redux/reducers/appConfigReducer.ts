@@ -1,4 +1,5 @@
 import { createSlice, Draft } from "@reduxjs/toolkit";
+import config from "configs/config.json";
 
 import { isNil } from "ramda";
 
@@ -6,7 +7,8 @@ import { IAppConfigTypes } from "types/state/appConfigTypes";
 
 const initialState: IAppConfigTypes = {
   device: null,
-  isPhone: false
+  isPhone: false,
+  nftConfig: config
 };
 
 const authReducer = createSlice({

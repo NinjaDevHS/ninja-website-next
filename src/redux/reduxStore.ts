@@ -7,9 +7,11 @@ import { NextPageContext } from "next";
 import { ThunkDispatch } from "redux-thunk";
 
 import appConfig from "redux/reducers/appConfigReducer";
+import walletReducer from "redux/reducers/walletReducer";
 
 const rootReducer = {
-  [appConfig.name]: appConfig.reducer
+  [appConfig.name]: appConfig.reducer,
+  [walletReducer.name]: walletReducer.reducer
 };
 
 export type AppState = Partial<StateFromReducersMapObject<typeof rootReducer>>;
