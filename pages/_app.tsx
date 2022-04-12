@@ -9,6 +9,8 @@ import AppTheme from "style/appTheme";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 
+import MetaMaskWrapper from "../src/components/wrappers/MetaMaskWrapper";
+
 interface IAppContainer {
   Component: NextComponentType<NextPageContext, any, Record<string, unknown>>;
   pageProps: any;
@@ -17,12 +19,15 @@ interface IAppContainer {
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps, reduxStore } = this.props as unknown as IAppContainer;
+    const { Component, pageProps, reduxStore } = this
+      .props as unknown as IAppContainer;
     return (
       <ThemeProvider theme={AppTheme}>
         <CssBaseline />
         <Provider store={reduxStore}>
-          <Component {...pageProps} />
+          <MetaMaskWrapper>
+            <Component {...pageProps} />
+          </MetaMaskWrapper>
         </Provider>
       </ThemeProvider>
     );

@@ -8,3 +8,24 @@ export const getIsPhone = createSelector(
   getAppConfig,
   (appConfig): boolean => appConfig.isPhone
 );
+
+export const getContractChainId = createSelector(
+  getAppConfig,
+  (appConfig: IAppConfigTypes) => {
+    return appConfig.nftConfig.chain_id;
+  }
+);
+
+export const getContractAddress = createSelector(
+  getAppConfig,
+  (appConfig: IAppConfigTypes) => {
+    return appConfig.nftConfig.address;
+  }
+);
+
+export const getContractAbi = createSelector(
+  getAppConfig,
+  (appConfig: IAppConfigTypes) => {
+    return appConfig.nftConfig.abi;
+  }
+);
